@@ -111,6 +111,6 @@ function closeOnErr(err) {
 
 setInterval(function() {
   publish("", "jobs", new Buffer("work work work"));
-}, 10);
+}, 10000);
 
 start();
