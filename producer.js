@@ -8,7 +8,6 @@ amqp.connect('amqp://localhost', function(error, connection) {
     if (error1) {
       throw error1;
     }
-
     let queue = 'node_queue';
     let msg = 'Test message';
 
@@ -20,7 +19,7 @@ amqp.connect('amqp://localhost', function(error, connection) {
     });
     console.log("Sent '%s'", msg);
   });
-  setTimeout(function() {
+  setInterval(function() {
     connection.close();
     process.exit(0)
   }, 500);
